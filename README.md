@@ -74,31 +74,6 @@ python3 check_youtube_watch_later.py "Watch later の動画.csv"
 年齢制限、地域制限、一時的な通信エラー、YouTube 側の仕様変更などでも候補に入る可能性があります。重要な動画は、出力された `watch_url` をブラウザで開いて手動確認してください。
 
 また、入力 CSV や出力 CSV には視聴履歴・再生リスト情報が含まれる場合があります。公開リポジトリへ誤ってアップロードしないよう注意してください。
-
-## GitHub に公開する手順
-
-初回だけ GitHub CLI の認証を行います。
-
-```bash
-gh auth login -h github.com
-```
-
-このフォルダで Git リポジトリを作成します。
-
-```bash
-git init
-git add check_youtube_watch_later.py README.md .gitignore
-git commit -m "Add YouTube watch later checker"
-```
-
-GitHub に新しいリポジトリを作って push します。
-
-```bash
-gh repo create youtube-watch-later-checker --public --source=. --remote=origin --push
-```
-
-非公開リポジトリにしたい場合は、`--public` を `--private` に変更してください。
-
 ## ライセンス
 
 必要に応じてライセンスファイルを追加してください。
